@@ -19,20 +19,6 @@ def get_page(url):
     # At the end of function it will return a beautifulsoup doc
     return BeautifulSoup(response.text,'html.parser')
 
-def get_page(url):
-    
-    # requests.get returns a response object containing the data from the web page.
-    response = requests.get(url)
-    
-    # status_code is used to check if the request was successful and if it's not then we will raise an exception.
-    if response.status_code != 200:
-        
-        # Exception will be raised if the status code is not 200
-        raise Exception ("Unable to fetch page " + url)
-    
-    # At the end of function it will return a beautifulsoup doc
-    return BeautifulSoup(response.text,'html.parser')
-
 def get_restaurant_listings(doc):
     ''''''
     # Declaring a variable selector that contains class for name tag.
